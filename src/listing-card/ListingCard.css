@@ -1,0 +1,21 @@
+.ListingCard {
+  background: #fff;
+}
+
+.ListingCard__details {
+  padding: .5em;
+}
+
+.ListingCard__title {
+  font-size: 1em;
+  margin: .5em 0;
+}
+
+.ListingCard__price {
+  font-size: .875em;
+}
+
+.ListingCard__miles {
+  font-size: .875em;
+  float: right;
+}

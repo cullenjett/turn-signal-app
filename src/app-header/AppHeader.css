@@ -33,14 +33,12 @@
 }
 
 .AppHeader__nav-link {
-  color: #586374;
   padding: .55em;
   position: relative;
 }
 
 .AppHeader__nav-link:hover,
 .AppHeader__nav-link:focus {
-  color: #586374;
   text-decoration: none;
 }
 

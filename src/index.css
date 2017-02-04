@@ -3,3 +3,13 @@ body {
   font-size: 16px;
   color: #586374;
 }
+
+a {
+  color: #586374;
+}
+
+a:hover,
+a:focus {
+  color: #586374;
+  text-decoration: none;
+}

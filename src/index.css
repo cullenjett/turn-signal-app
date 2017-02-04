@@ -18,6 +18,16 @@ a:focus {
   max-width: 1440px;
 }
 
+.row {
+  margin-left: -.5rem;
+  margin-right: -.5rem;
+}
+
+[class*='col-'] {
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
 /* Utilities
 ----------------------------*/
 .blue-text {

@@ -1,5 +1,6 @@
 import React from "react";
 import ListingCard from "./listing-card/ListingCard";
+import './Listings.css';
 
 const renderListingCards = listings => {
   return listings.map(listing => {

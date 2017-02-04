@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,500');
+
 body {
-  font-family: 'Avenir Next', Avenir, sans-serif;
+  font-family: 'Avenir Next', Avenir, 'Nunito', sans-serif;
   font-size: 16px;
   color: #586374;
 }

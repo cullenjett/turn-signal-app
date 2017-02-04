@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import AppHeader from './app-header/AppHeader';
 import Listings from './listings/Listings';
 import ListingModel from './listings/listing.model';
+import Filter from './filter/Filter';
 import './App.css';
 
 class App extends Component {
@@ -35,7 +36,10 @@ class App extends Component {
 
         <section className="App__body container-fluid">
           <div className="row">
-            <div className="col-lg-2 col-md-3 col-sm-4"></div>
+            <div className="col-lg-2 col-md-3 col-sm-4">
+              <Filter />
+            </div>
+            
             <div className="col-lg-10 col-md-9 col-sm-8">
               <Listings listings={listings} />
             </div>

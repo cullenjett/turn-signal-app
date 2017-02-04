@@ -11,7 +11,6 @@ export default class ListingModel {
       .get(`${URL_ROOT}/listings/search?per_page=30&${qs}`)
       .then(res => {
         let listings = res.data.results;
-        console.log(listings)
         return listings;
       });
   }

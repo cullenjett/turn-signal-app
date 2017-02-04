@@ -29,13 +29,10 @@ export default class ListingDecorator {
 
   // http://stackoverflow.com/questions/149055/how-can-i-format-numbers-as-money-in-javascript
   addCommas(num) {
-    var n = num,
-      c = isNaN(c = Math.abs(c)) ? 2 : c,
-      d = d == undefined ? "." : d,
-      t = t == undefined ? "," : t,
-      s = n < 0 ? "-" : "",
-      i = String(parseInt(n = Math.abs(Number(n) || 0).toFixed(c))),
-      j = (j = i.length) > 3 ? j % 3 : 0;
-   return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t);
+    let sign = num < 0 ? "-" : "";
+    let numString = Math.abs(Number(num)).toString();
+    let remainder = numString.length > 3 ? numString.length % 3 : 0;
+
+    return sign + (remainder ? numString.substr(0, remainder) + "," : "") + numString.substr(remainder).replace(/(\d{3})(?=\d)/g, "$1,");
   }
 }

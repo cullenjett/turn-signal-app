@@ -15,6 +15,10 @@ export default class ListingDecorator {
     return "$" + this.addCommas(this.listing.asking_price);
   }
 
+  get isFinanceable() {
+    return this.listing.financeable;
+  }
+
   get monthlyPayment() {
     return "$" + this.addCommas(this.listing.estimated_monthly_payment);
   }

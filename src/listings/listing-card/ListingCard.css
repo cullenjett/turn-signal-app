@@ -26,6 +26,10 @@
   font-size: .875em;
 }
 
+.ListingCard__financing {
+  color: #00D1E8;
+}
+
 .ListingCard__miles {
   font-size: .875em;
   float: right;

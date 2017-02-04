@@ -1,0 +1,63 @@
+.AppHeader {
+  padding: 2rem 0;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+
+.AppHeader__logo {
+  height: 2.5em;
+}
+
+.AppHeader__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  font-size: 1.125em;
+  font-weight: 500;
+}
+
+.AppHeader__nav--left {
+  flex: 1 1 auto;
+}
+
+.AppHeader__nav--right {
+  flex: 0 1 auto;
+}
+
+.AppHeader__nav-list {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.AppHeader__nav-link {
+  color: #586374;
+  padding: .55em;
+  position: relative;
+}
+
+.AppHeader__nav-link:hover,
+.AppHeader__nav-link:focus {
+  color: #586374;
+  text-decoration: none;
+}
+
+.AppHeader__nav-link:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  height: 2px;
+  border-radius: 2px;
+  background: #00D1E8;
+  transition: all .2s ease-in;
+}
+
+.AppHeader__nav-link:hover:after,
+.AppHeader__nav-link.active:after {
+  left: .55em;
+  right: .55em;
+}

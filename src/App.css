@@ -1,3 +1,7 @@
 .App {
 
 }
+
+.App__body {
+  padding: 2rem 0;
+}

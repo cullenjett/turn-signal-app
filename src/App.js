@@ -8,13 +8,15 @@ class App extends Component {
     return (
       <div className="App">
         <AppHeader />
-        <div className="container">
-          <div className="row">
-            <div className="col-md-4">
-              <ListingCard />
+        <section className="App__body">
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-md-4">
+                <ListingCard />
+              </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     );
   }

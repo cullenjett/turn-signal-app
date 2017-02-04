@@ -13,3 +13,10 @@ a:focus {
   color: #586374;
   text-decoration: none;
 }
+
+
+/* Utilities
+----------------------------*/
+.blue-text {
+  color: #00D1E8;
+}

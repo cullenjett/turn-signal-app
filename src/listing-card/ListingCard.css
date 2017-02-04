@@ -1,14 +1,24 @@
 .ListingCard {
   background: #fff;
+  transition: background .2s;
+}
+
+.ListingCard:hover {
+  background: #f8f8f8;
+}
+
+.ListingCard__img {
+  width: 100%;
 }
 
 .ListingCard__details {
   padding: .5em;
+  font-weight: 500;
 }
 
 .ListingCard__title {
   font-size: 1em;
-  margin: .5em 0;
+  margin: 0 0 .5em 0;
 }
 
 .ListingCard__price {

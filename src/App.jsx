@@ -31,7 +31,12 @@ class App extends Component {
         <AppHeader />
 
         <section className="App__body container-fluid">
-          <Listings listings={listingData} />
+          <div className="row">
+            <div className="col-md-3 col-sm-4"></div>
+            <div className="col-md-9 col-sm-8">
+              <Listings listings={listingData} />
+            </div>
+          </div>
         </section>
       </div>
     );

@@ -1,5 +1,6 @@
 .ListingCard {
   background: #fff;
+  margin-bottom: 2em;
   transition: background .2s;
 }
 

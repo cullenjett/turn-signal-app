@@ -12,19 +12,19 @@ export default class ListingDecorator {
   }
 
   get askingPrice() {
-    return this.toCurrency(this.listing.asking_price);
+    return "$" + this.addCommas(this.listing.asking_price);
   }
 
   get monthlyPayment() {
-    return this.toCurrency(this.listing.estimated_monthly_payment);
+    return "$" + this.addCommas(this.listing.estimated_monthly_payment);
   }
 
   get miles() {
-    return this.listing.miles;
+    return this.addCommas(this.listing.miles);
   }
 
   // http://stackoverflow.com/questions/149055/how-can-i-format-numbers-as-money-in-javascript
-  toCurrency(num) {
+  addCommas(num) {
     var n = num,
       c = isNaN(c = Math.abs(c)) ? 2 : c,
       d = d == undefined ? "." : d,
@@ -32,6 +32,6 @@ export default class ListingDecorator {
       s = n < 0 ? "-" : "",
       i = String(parseInt(n = Math.abs(Number(n) || 0).toFixed(c))),
       j = (j = i.length) > 3 ? j % 3 : 0;
-   return "$" + s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t);
+   return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t);
   }
 }

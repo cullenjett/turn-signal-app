@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AppHeader from './app-header/AppHeader';
 import Listings from './listings/Listings';
+import ListingModel from './listings/listing.model';
 import './App.css';
 
 const listingData = [
@@ -25,7 +26,20 @@ const listingData = [
 ];
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      listings: []
+    };
+  }
+
+  componentDidMount() {
+    ListingModel.page(1).then(listings => this.setState({ listings }))
+  }
+
   render() {
+    const { listings } = this.state;
+
     return (
       <div className="App">
         <AppHeader />
@@ -34,7 +48,7 @@ class App extends Component {
           <div className="row">
             <div className="col-md-3 col-sm-4"></div>
             <div className="col-md-9 col-sm-8">
-              <Listings listings={listingData} />
+              <Listings listings={listings} />
             </div>
           </div>
         </section>

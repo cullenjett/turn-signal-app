@@ -1,5 +1,6 @@
 import React from 'react';
 import './AppHeader.css'
+import logo from '../../public/logo.svg';
 
 const AppHeader = () => {
   return (
@@ -7,7 +8,7 @@ const AppHeader = () => {
       <div className="container-fluid AppHeader__nav">
         <div className="AppHeader__nav--left">
           <a href="/">
-            <img src="https://cars.blinker.com/images/blinker-logo-tag-line.svg" className="AppHeader__logo" alt="logo" />
+            <img src={logo} className="AppHeader__logo" alt="logo" />
           </a>
         </div>
 

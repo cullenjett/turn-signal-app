@@ -15,6 +15,12 @@ const listingData = [
     title: '2011 Mercedes-Benz GL Class',
     price: '$21,500',
     miles: '111,696'
+  },
+  {
+    id: 3,
+    title: '2016 Jeep Renegade',
+    price: '$21,500',
+    miles: '18,500'
   }
 ];
 
@@ -23,7 +29,7 @@ class App extends Component {
     return (
       <div className="App">
         <AppHeader />
-        
+
         <section className="App__body container-fluid">
           <Listings listings={listingData} />
         </section>

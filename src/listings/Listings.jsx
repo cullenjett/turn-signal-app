@@ -4,7 +4,7 @@ import ListingCard from "./listing-card/ListingCard";
 const renderListingCards = listings => {
   return listings.map(listing => {
     return (
-      <div className="col-md-4" key={listing.id}>
+      <div className="col-md-4 col-sm-6" key={listing.id}>
         <ListingCard listing={listing} />
       </div>
     );

@@ -34,7 +34,17 @@ class App extends Component {
   }
 
   componentDidMount() {
-    ListingModel.page(1).then(listings => this.setState({ listings }))
+    ListingModel.where({
+      page: 1,
+      search: {
+        min_price: 0,
+        max_price: 105000,
+        min_year: 1981,
+        max_year: 2016,
+        min_mileage: 0,
+        max_mileage: 280000
+      }
+    }).then(listings => this.setState({ listings }))
   }
 
   render() {

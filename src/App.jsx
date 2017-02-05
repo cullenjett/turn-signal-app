@@ -2,19 +2,15 @@ import React, { Component } from 'react';
 import AppHeader from './app-header/AppHeader';
 import Listings from './listings/Listings';
 import ListingModel from './listings/listing.model';
-import Filter from './filter/Filter';
+import FilterList from './filter-list/FilterList';
 import './App.css';
 
 class App extends Component {
   constructor() {
     super();
-    this.state = {
-      listings: []
-    };
-  }
 
-  componentDidMount() {
-    ListingModel.where({
+    this.state = {
+      listings: [],
       page: 1,
       search: {
         min_price: 0,
@@ -24,7 +20,33 @@ class App extends Component {
         min_mileage: 0,
         max_mileage: 280000
       }
-    }).then(listings => this.setState({ listings }))
+    };
+
+    this.handleFilterChange = this.handleFilterChange.bind(this);
+  }
+
+  componentDidMount() {
+    const { page, search } = this.state;
+
+    ListingModel.where({
+      page,
+      search
+    }).then(listings => this.setState({ listings }));
+  }
+
+  handleFilterChange(filterName, values) {
+    let minFilterName = `min_${filterName}`;
+    let maxFilterName = `max_${filterName}`;
+    let minFilterValue = values[0];
+    let maxFilterValue = values[1];
+
+    ListingModel.where({
+      page: 1,
+      search: {
+        [minFilterName]: minFilterValue,
+        [maxFilterName]: maxFilterValue
+      }
+    }).then(listings => this.setState({ listings }));
   }
 
   render() {
@@ -37,7 +59,7 @@ class App extends Component {
         <section className="App__body container-fluid">
           <div className="row">
             <div className="col-lg-2 col-md-3 col-sm-4">
-              <Filter />
+              <FilterList onChange={this.handleFilterChange}/>
             </div>
 
             <div className="col-lg-10 col-md-9 col-sm-8">

@@ -1,3 +1,7 @@
+.Filter {
+  margin-bottom: 2em;
+}
+
 .Filter__label {
   font-size: 1.125em;
   font-weight: 600;
@@ -7,6 +11,7 @@
 .Filter__output-container {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 5px;
 }
 
 .Filter__output {
@@ -16,8 +21,8 @@
 /* rc-slider overrides
 -----------------------------------*/
 .Filter__range.rc-slider {
-  margin-left: 5px;
-  width: calc(100% - 15px);
+  margin-left: 10px;
+  width: calc(100% - 20px);
 }
 
 .Filter__range .rc-slider-track {

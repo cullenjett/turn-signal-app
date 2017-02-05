@@ -35,18 +35,20 @@ class App extends Component {
   }
 
   handleFilterChange(filterName, values) {
-    let minFilterName = `min_${filterName}`;
-    let maxFilterName = `max_${filterName}`;
-    let minFilterValue = values[0];
-    let maxFilterValue = values[1];
+    const minFilterName = `min_${filterName}`;
+    const maxFilterName = `max_${filterName}`;
 
-    ListingModel.where({
-      page: 1,
-      search: {
-        [minFilterName]: minFilterValue,
-        [maxFilterName]: maxFilterValue
-      }
-    }).then(listings => this.setState({ listings }));
+    const nextSearch = Object.assign({}, this.state.search, {
+      [minFilterName]: values[0],
+      [maxFilterName]: values[1]
+    });
+
+    this.setState({ search: nextSearch }, () => {
+      ListingModel.where({
+        page: this.state.page,
+        search: this.state.search
+      }).then(listings => this.setState({ listings }));
+    });
   }
 
   render() {

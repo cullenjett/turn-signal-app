@@ -6,13 +6,14 @@ import './Filter.css';
 class Filter extends Component {
   constructor() {
     super();
-    
+
     this.state = {
       min: 0,
       max: 100
     };
 
     this.setOutputValues = this.setOutputValues.bind(this);
+    this.handleFilterChange = this.handleFilterChange.bind(this);
   }
 
   setOutputValues(values) {

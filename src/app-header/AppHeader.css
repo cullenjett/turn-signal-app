@@ -1,6 +1,6 @@
 .AppHeader {
   padding: 2rem 0;
-  box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+  border-bottom: 2px solid #e5e8eb;
 }
 
 .AppHeader__logo {
@@ -50,7 +50,7 @@
   height: 2px;
   border-radius: 2px;
   background: #00D1E8;
-  transition: all .2s ease-in;
+  transition: all .3s ease-out;
 }
 
 .AppHeader__nav-link:hover:after,

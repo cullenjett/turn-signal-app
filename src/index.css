@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,500');
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,500,600');
 
 body {
   font-family: 'Avenir Next', Avenir, 'Nunito', sans-serif;
@@ -28,4 +28,14 @@ a:focus {
 [class*='col-'] {
   padding-left: .5rem;
   padding-right: .5rem;
+}
+
+.row--flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row--flex [class*='col-'] {
+  display: flex;
+  flex-direction: column;
 }

@@ -15,7 +15,7 @@ const renderListingCards = listings => {
 const Listings = ({ listings }) => {
   return (
     <div className="Listings">
-      <div className="row">
+      <div className="row row--flex">
         {renderListingCards(listings)}
       </div>
     </div>

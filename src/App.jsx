@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import AppHeader from './app-header/AppHeader';
+import FilterList from './filter-list/FilterList';
+import ResultSummary from './ResultSummary';
 import Listings from './listings/Listings';
 import ListingModel from './listings/listing.model';
-import FilterList from './filter-list/FilterList';
-import './App.css';
 
 class App extends Component {
   constructor() {
@@ -58,13 +58,14 @@ class App extends Component {
       <div className="App">
         <AppHeader />
 
-        <section className="App__body container-fluid">
-          <div className="row">
-            <div className="col-lg-2 col-md-3 col-sm-4">
+        <section className="container-fluid">
+          <div className="row row--flex">
+            <div className="col-lg-2 col-md-3 col-sm-4" style={{paddingRight: 0}}>
               <FilterList onChange={this.handleFilterChange}/>
             </div>
 
-            <div className="col-lg-10 col-md-9 col-sm-8">
+            <div className="col-lg-10 col-md-9 col-sm-8" style={{paddingLeft: 0}}>
+              <ResultSummary />
               <Listings listings={listings} />
             </div>
           </div>

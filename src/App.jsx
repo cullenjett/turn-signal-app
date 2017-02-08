@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import AppHeader from './app-header/AppHeader';
 import FilterList from './filter-list/FilterList';
-import ResultSummary from './ResultSummary';
+import ResultSummary from './simple-components/ResultSummary';
 import Listings from './listings/Listings';
 import ListingModel from './listings/listing.model';
 import Spinner from './spinner/Spinner';
+import Flash from './simple-components/Flash';
 
 class App extends Component {
   constructor() {
@@ -62,6 +63,10 @@ class App extends Component {
     return (
       <div className="App">
         <AppHeader />
+
+        <Flash>
+          <code>This is a shameless clone of <a href="https://cars.blinker.com">Blinker.com</a></code>
+        </Flash>
 
         <section className="container-fluid">
           <div className="row row--flex">

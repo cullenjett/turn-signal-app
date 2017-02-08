@@ -7,7 +7,7 @@ const AppHeader = () => {
     <header className="AppHeader">
       <div className="container-fluid AppHeader__nav">
         <div className="AppHeader__nav--left">
-          <a href="/">
+          <a href="#">
             <img src={logo} className="AppHeader__logo" alt="logo" />
           </a>
         </div>

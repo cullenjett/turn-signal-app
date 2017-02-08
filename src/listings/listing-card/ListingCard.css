@@ -18,8 +18,9 @@
 }
 
 .ListingCard__title {
+  color: #2B3642;
   font-size: 1em;
-  margin: 0 0 .25em 0;
+  margin: 0 0 .1em 0;
 }
 
 .ListingCard__price {

@@ -1,0 +1,29 @@
+.Spinner {
+  position: absolute;
+  top: 10rem;
+  left: calc(50% - 3vw);
+  width: 6vw;
+  height: 6vw;
+  border: 1.2vw double;
+  border-radius: 50%;
+  border-color: transparent #00D1E8 #00D1E8 #00D1E8;
+  opacity: .7;
+  animation: spin 750ms infinite linear;
+  z-index: 9;
+}
+
+.Spinner__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(255,255,255,0.7);
+  z-index: 9;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

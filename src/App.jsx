@@ -4,12 +4,14 @@ import FilterList from './filter-list/FilterList';
 import ResultSummary from './ResultSummary';
 import Listings from './listings/Listings';
 import ListingModel from './listings/listing.model';
+import Spinner from './spinner/Spinner';
 
 class App extends Component {
   constructor() {
     super();
 
     this.state = {
+      isLoading: true,
       listings: [],
       page: 1,
       search: {
@@ -31,7 +33,7 @@ class App extends Component {
     ListingModel.where({
       page,
       search
-    }).then(listings => this.setState({ listings }));
+    }).then(listings => this.setState({ isLoading: false, listings }));
   }
 
   handleFilterChange(filterName, values) {
@@ -43,11 +45,14 @@ class App extends Component {
       [maxFilterName]: values[1]
     });
 
-    this.setState({ search: nextSearch }, () => {
+    this.setState({
+      isLoading: true,
+      search: nextSearch
+    }, () => {
       ListingModel.where({
         page: this.state.page,
         search: this.state.search
-      }).then(listings => this.setState({ listings }));
+      }).then(listings => this.setState({ isLoading: false, listings }));
     });
   }
 
@@ -66,7 +71,9 @@ class App extends Component {
 
             <div className="col-lg-10 col-md-9 col-sm-8" style={{paddingLeft: 0}}>
               <ResultSummary />
-              <Listings listings={listings} />
+              <Spinner isLoading={this.state.isLoading}>
+                <Listings listings={listings} />
+              </Spinner>
             </div>
           </div>
         </section>

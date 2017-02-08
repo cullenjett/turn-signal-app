@@ -65,7 +65,7 @@ class App extends Component {
         <AppHeader />
 
         <Flash>
-          <code>This is a shameless clone of <a href="https://cars.blinker.com">Blinker.com</a></code>
+          <code>This is a shameless clone-in-progress of <a href="https://cars.blinker.com">Blinker.com</a></code>
         </Flash>
 
         <section className="container-fluid">

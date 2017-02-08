@@ -8,7 +8,7 @@ const AppHeader = () => {
       <div className="container-fluid AppHeader__nav">
         <div className="AppHeader__nav--left">
           <a href="#">
-            <img src={logo} className="AppHeader__logo" alt="logo" />
+            <img src={logo} className="AppHeader__logo" alt="Cullen Jett | Full Stack Developer" />
           </a>
         </div>
 

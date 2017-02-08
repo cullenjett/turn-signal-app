@@ -1,10 +1,11 @@
-import React from 'react';
+import React from "react";
 
-const ResultSummary = () => {
+const ResultSummary = ({ numberFound, withinRange }) => {
   return (
     <div className="row">
       <div className="col-xs-12">
-        <p style={{
+        <p
+          style={{
             color: "#2B3642",
             fontWeight: 500,
             padding: "2rem",
@@ -12,7 +13,9 @@ const ResultSummary = () => {
             borderRight: "2px solid #E5E8EB",
             borderBottom: "2px solid #E5E8EB",
             borderLeft: "2px solid #E5E8EB"
-          }}>350 cars within 500 miles
+          }}
+        >
+          {numberFound} cars within {withinRange} miles
         </p>
       </div>
     </div>

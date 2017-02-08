@@ -58,7 +58,7 @@ class App extends Component {
   }
 
   render() {
-    const { listings } = this.state;
+    const { isLoading, listings } = this.state;
 
     return (
       <div className="App">
@@ -75,8 +75,8 @@ class App extends Component {
             </div>
 
             <div className="col-lg-10 col-md-9 col-sm-8" style={{paddingLeft: 0}}>
-              <ResultSummary />
-              <Spinner isLoading={this.state.isLoading}>
+              <ResultSummary numberFound={350} withinRange={500}/>
+              <Spinner isLoading={isLoading}>
                 <Listings listings={listings} />
               </Spinner>
             </div>
